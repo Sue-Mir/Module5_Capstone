@@ -1,9 +1,8 @@
-# Tracking Flu Outbreaks with Twitter
+# Were US Covid19 daily case numbers a predictor for the NASDAQ stock market index in 2020?
 
 ## Project Analysis
-Were US Covid19 daily case numbers a predictor for the NASDAQ stock market index in 2020?
 
-The global Covid19 pandemic has, on an economic scale, shaken markets from all levels from micro to macro. But, did it shake the Nasdaq stock index and move faster, if so, which factors of daily US Covid19 ma case numbers were predominant predictors?
+The global Covid19 pandemic has, on an economic scale, shaken markets from all levels from micro to macro. But, did it shake the Nasdaq stock index and move it faster, and if so, which factors of daily US Covid19 ma case numbers were predominant predictors?
 
 ![header](covid19_stkmkt.png)
 
@@ -29,7 +28,7 @@ Given the ECDC data combined with the NASDAQ daily close price of 6 months befor
 
 Which period of time resulted in the strongest predictors when running timeseries train test splits separated into the following periods: BEFORE Covid19, FIRST MONTH Covid19, DURING Covid19 and BEFORE and AFTER Covid19?
 
-Which US Covid19 daily case moving averages showed the strongest relationship with the US Nasdaq moving averages by Linear Regression. Moving averages were calculated weekly from 7 days to 28days for both types of data.
+Which US Covid19 daily case moving averages showed the strongest relationship with the US Nasdaq moving averages by Linear Regression. Moving averages were calculated weekly from 7 days to 28 days for both types of data.
 
 
 ## Conclusions 
