@@ -23,7 +23,7 @@ From a general visual double-y axis plot of the data, you can see quite obviousl
 ![header](visualisation.png)
 
 
-## Data modelling
+## Data Modelling
 Given the ECDC data combined with the NASDAQ daily close price of 6 months before and after the initial reporting of Covid19, my main fundamental questions for analysis were:
 
 Which period of time resulted in the strongest predictors when running timeseries train test splits separated into the following periods: BEFORE Covid19, FIRST MONTH Covid19, DURING Covid19 and BEFORE and AFTER Covid19?
