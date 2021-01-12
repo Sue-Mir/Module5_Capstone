@@ -42,13 +42,11 @@ DURING Covid19
 6 MONTHS BEFORE AND AFTER Covid19
 The returned result from the model with the strongest linear relationship was DURING Covid19.
 
-* Further When running a linear regression stepwise selection the US Covid19 7 Day moving average resulted with the strongest feature values.  The NASDAQ 7 Day Moving Average also was defined in stepwise selection as a strong feature.
+* Further When running a linear regression stepwise selection the US Covid19 14 Day moving average resulted with the strongest feature values.  The NASDAQ 7 and 14 Day Moving Averages also were defined in stepwise selection as a strong feature.
 
-*  The R squared value (0.109) for the Covid19 7 Day Moving average was not sufficient to recommend that this feature was a significantly strong predictor for the change in daily NASDAQ close price.
+*  The R squared value (0.310) for the Covid19 14 Day Moving average was not sufficient to recommend that this feature was a significantly strong predictor for the change in daily NASDAQ close price.
 
 * In final recommendations, I would not recommend that US Daily Covid19 case numbers be used for strong prediction of the NASDAQ daily close price.
 
 * Next steps could include modelling data with faster moving averages of the NASDAQ price (for example by minute, hour(s)). Alternatively other data representing significant news announcements related to Covid19 could be modeled for feature selection (for example vaccine announcements on twitter or other news sources)
-
-Sue Mir / Flatiron Data Science Course / December 2020
 
