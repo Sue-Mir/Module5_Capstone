@@ -50,3 +50,5 @@ The returned result from the model with the strongest linear relationship was DU
 
 * Next steps could include modelling data with faster moving averages of the NASDAQ price (for example by minute, hour(s)). Alternatively other data representing significant news announcements related to Covid19 could be modeled for feature selection (for example vaccine announcements on twitter or other news sources)
 
+Further reading on this project:  https://datasciencesuemir.medium.com/were-us-covid19-case-numbers-a-nasdaq-predictor-in-2020-402c3a01a2b7
+
