@@ -15,7 +15,7 @@ It should be noted that the case numbers reported to ECDC depended upon the clea
 
 Data for the Nasdaq Daily close price was extracted from yahoo finance.
 
-Both data types were then converted to their respective weekly moving average values from 7 days to 28 days and piped into a csv data file to be processed for modelling.
+Both data types were reshaped to include weekly moving average indicators from 7 to 28 days, 6 months before and after the initial reporting of Covid19.  Data was joined by daily date index and piped into a csv data file to be processed for modelling.
 
 ## Visualisation
 From a general visual double-y axis plot of the data, you can see quite obviously that the US Covid 19 Daily case numbers did not display a tight relation with the NASDAQ daily close price; except for the initial fall(stock market crash) of the case numbers in March 2020, after which it continued to rise:
@@ -23,12 +23,24 @@ From a general visual double-y axis plot of the data, you can see quite obviousl
 ![header](visualisation.png)
 
 
-## Data Modelling
-Given the ECDC data combined with the NASDAQ daily close price of 6 months before and after the initial reporting of Covid19, my main fundamental questions for analysis were:
+## Data Modelling - Time Series
+![header](Process_Diagram1.png)
+![header](Process_Diagram2.png)
+Time series modelling was performed to derive which period of time resulted in the strongest predictors for the Nasdaq100 price when running timeseries train test splits separated into the following periods: BEFORE Covid19, FIRST MONTH Covid19, DURING Covid19 and BEFORE and AFTER Covid19?
 
-Which period of time resulted in the strongest predictors when running timeseries train test splits separated into the following periods: BEFORE Covid19, FIRST MONTH Covid19, DURING Covid19 and BEFORE and AFTER Covid19?
+There were no seasonal trends and no radical shifts, further clarified as 'non-random' by a strong P value that would allow us to confirm that the Nasdaq index price traded faster/slower on the daily ma during the Covid19 period.
 
+The co-efficient values on the train test split DURING and in the FIRST MONTH of Covid19 showed a STRONGER predictive value as compared to the periods that included both BEFORE AND DURING Covid19. The shorter the period modelled of Covid19, the easier it was to predict the close price.
+
+
+## Data Modelling - Linear Regression
+![header](Process_Diagram3.png)
+![header](Process_Diagram4.png)
 Which US Covid19 daily case moving averages showed the strongest relationship with the US Nasdaq moving averages by Linear Regression. Moving averages were calculated weekly from 7 days to 28 days for both types of data.
+
+When modelling with linear regression stepwise selection the US Covid19 14 Day moving average resulted with the strongest feature values.  The NASDAQ 7 and 14 Day Moving Averages also were defined in stepwise selection as a strong feature.
+
+The R squared value (0.310) for the Covid19 14 Day Moving average was not sufficient to recommend that this feature was a significantly strong predictor for the change in daily NASDAQ close price.
 
 
 ## Conclusions 
@@ -40,9 +52,9 @@ Which US Covid19 daily case moving averages showed the strongest relationship wi
 FIRST MONTH of Covid19
 DURING Covid19
 6 MONTHS BEFORE AND AFTER Covid19
-The returned result from the model with the strongest linear relationship was DURING Covid19.
+The returned result from the model with the strongest linear relationship was FIRST MONTH Covid19.
 
-* Further When running a linear regression stepwise selection the US Covid19 14 Day moving average resulted with the strongest feature values.  The NASDAQ 7 and 14 Day Moving Averages also were defined in stepwise selection as a strong feature.
+* Further When modelling a linear regression stepwise selection the US Covid19 14 Day moving average resulted with the strongest feature values.  The NASDAQ 7 and 14 Day Moving Averages also were defined in stepwise selection as a strong feature.
 
 *  The R squared value (0.310) for the Covid19 14 Day Moving average was not sufficient to recommend that this feature was a significantly strong predictor for the change in daily NASDAQ close price.
 
